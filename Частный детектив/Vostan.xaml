@@ -1,0 +1,36 @@
+﻿<Window x:Class="Частный_детектив.Vostan"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Частный_детектив"
+        mc:Ignorable="d"
+        Title="Восстановление доступа" Height="300" Width="400" Closed="Window_Closed">
+    <Window.Resources>
+        <Style TargetType="Label">
+            <Setter Property="FontFamily" Value="Arial"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Margin" Value="20,0"/>
+            <Setter Property="VerticalAlignment" Value="Bottom"/>
+        </Style>
+        <Style TargetType="TextBox">
+            <Setter Property="FontFamily" Value="Arial"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Margin" Value="20,0"/>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1.5*"/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition Height="1.5*"/>
+        </Grid.RowDefinitions>
+        <Border Margin ="5,5,200,5" BorderBrush="#FF303FD3" BorderThickness="2">
+            <TextBlock x:Name="up" TextWrapping="Wrap" Grid.Column="0" FontSize="16"><Run Foreground="#FF303FD3" Text="Агентство"/><LineBreak/><Run FontSize="20" Text="Частный детектив"/></TextBlock>
+        </Border>
+        <Label Content="Почта" Grid.Row="1"/>
+        <TextBox x:Name="textBoxMail" Grid.Row="2" TextWrapping="Wrap"/>
+        <Button Cursor="Hand" Content="Восстановить пароль" Background="#FF4956A6" Foreground ="White" Grid.Row="3" Width="212" Height="37" FontSize="18" Click="Button_Click"/>
+    </Grid>
+</Window>
